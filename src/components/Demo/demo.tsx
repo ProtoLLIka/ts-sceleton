@@ -5,7 +5,11 @@ import { selectSomeData } from 'store/app/selectors';
 import { someSyncAction, someAsyncAction } from 'store/app/actions';
 import { AppDispatch } from 'store/types';
 
-export const Demo = () => {
+type Props = {
+  
+}
+
+export const Demo = (props: Props) => {
   const data = useSelector(selectSomeData);
   const dispatch = useDispatch<AppDispatch>();
 
