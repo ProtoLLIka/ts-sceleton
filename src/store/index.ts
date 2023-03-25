@@ -1,7 +1,14 @@
 import { configureStore } from '@reduxjs/toolkit';
 
-import { appReducer } from './app';
+import { useDispatch } from 'react-redux';
 
-export const store = configureStore({
-  reducer: { app: appReducer },
+import { AppDispatch, TReducer } from '@store/types';
+
+import { reducer } from './reducer';
+
+export const store = configureStore<TReducer, any>({
+  reducer,
 });
+
+export const useAppDispatch: () => AppDispatch = useDispatch;
+export { AppDispatch, TReducer } from './types';

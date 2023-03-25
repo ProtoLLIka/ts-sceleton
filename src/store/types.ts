@@ -1,10 +1,6 @@
-import { AppInitialState } from 'store/app/types';
+import { store } from '.';
 
-import { store } from './index';
+export type TReducer = {};
 
-export type Store = {
-  app: AppInitialState;
-};
-
-export type RootState = ReturnType<typeof store.getState>;
 export type AppDispatch = typeof store.dispatch;
+export type RootState = ReturnType<typeof store.getState>;

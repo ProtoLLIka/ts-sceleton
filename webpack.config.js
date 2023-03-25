@@ -2,7 +2,11 @@ const isProd = process.env.PROD_MODE === 'production';
 
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
+const webpack = require('webpack');
 const path = require('path');
+const dotenv = require('dotenv');
+
+dotenv.config();
 
 module.exports = {
   mode: isProd ? 'production' : 'development',
@@ -33,14 +37,17 @@ module.exports = {
       favicon: './src/assets/favicon.ico',
     }),
     new MiniCssExtractPlugin(),
+    new webpack.DefinePlugin({
+      API_URL: JSON.stringify(process.env.API_URL || ''),
+    }),
   ],
   resolve: {
     alias: {
-      api: path.resolve(__dirname, './src/api'),
-      assets: path.resolve(__dirname, './src/assets'),
-      components: path.resolve(__dirname, './src/components'),
-      store: path.resolve(__dirname, './src/store'),
-      utils: path.resolve(__dirname, './src/utils'),
+      '@api': path.resolve(__dirname, './src/api'),
+      '@assets': path.resolve(__dirname, './src/assets'),
+      '@components': path.resolve(__dirname, './src/components'),
+      '@store': path.resolve(__dirname, './src/store'),
+      '@utils': path.resolve(__dirname, './src/utils'),
     },
     extensions: ['.ts', '.tsx', '.js'],
   },

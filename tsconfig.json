@@ -8,15 +8,14 @@
     "strict": true,
     "sourceMap": true,
     "target": "esnext",
-    "baseUrl": "src",
+    "baseUrl": "./src",
     "paths": {
-      "api": ["api/*"],
-      "assets": ["assets/*"],
-      "components": ["components/*"],
-      "store": ["store/*"],
-      "utils": ["utils/*"]
+      "@api/*": ["api/*"],
+      "@assets/*": ["assets/*"],
+      "@components/*": ["components/*"],
+      "@store/*": ["store/*"],
+      "@utils/*": ["utils/*"]
     }
   },
-  "include": ["src/**/*"],
-  "exclude": ["node_modules", "src/**/*.spec.ts"]
+  "exclude": ["node_modules"]
 }

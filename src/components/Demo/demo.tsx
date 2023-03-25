@@ -1,29 +1,17 @@
-import React, { useCallback, useEffect } from 'react';
-import { useDispatch, useSelector } from 'react-redux';
+import React, { useEffect } from 'react';
 
-import { selectSomeData } from 'store/app/selectors';
-import { someSyncAction, someAsyncAction } from 'store/app/actions';
-import { AppDispatch } from 'store/types';
+import { action, asyncAction } from '@store/actions';
+import { useAppDispatch } from '@store/index';
 
-type Props = {
-  
-}
+import * as S from './styled';
 
-export const Demo = (props: Props) => {
-  const data = useSelector(selectSomeData);
-  const dispatch = useDispatch<AppDispatch>();
-
-  const onClick = useCallback(() => {
-    dispatch(someSyncAction(1));
-  }, [dispatch, someSyncAction]);
+export const Demo: React.FC = () => {
+  const dispatch = useAppDispatch();
 
   useEffect(() => {
-    dispatch(someAsyncAction());
-  }, [dispatch, someAsyncAction]);
+    dispatch(action(2));
+    dispatch(asyncAction(2));
+  }, []);
 
-  return (
-    <div>
-      {data} <button onClick={onClick}>Click</button>
-    </div>
-  );
+  return <S.Button>Demo</S.Button>;
 };

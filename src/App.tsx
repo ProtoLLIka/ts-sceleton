@@ -1,11 +1,9 @@
 import React from 'react';
 import { Provider } from 'react-redux';
 
-import { store } from 'store/index';
+import { Demo } from '@components/Demo';
 
-import { Demo } from 'components/Demo';
-
-const someAction = () => {};
+import { store } from '@store/index';
 
 const App = () => {
   return (

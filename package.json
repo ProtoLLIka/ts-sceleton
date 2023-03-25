@@ -1,5 +1,5 @@
 {
-  "name": "hello-react",
+  "name": "front-x5-tender",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
@@ -11,13 +11,15 @@
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "@types/react": "^17.0.48",
+    "@trivago/prettier-plugin-sort-imports": "^4.1.1",
+    "@types/react": "^17.0.45",
     "@types/react-dom": "^17.0.10",
     "babel-core": "^6.26.3",
     "babel-eslint": "^10.1.0",
     "babel-preset-airbnb": "^5.0.0",
     "babel-preset-react-native": "^4.0.1",
     "css-loader": "^6.5.0",
+    "dotenv": "^16.0.3",
     "eslint": "^8.1.0",
     "eslint-config-airbnb": "^18.2.1",
     "eslint-config-prettier": "^8.3.0",
@@ -34,18 +36,18 @@
     "prettier-eslint": "^13.0.0",
     "ts-loader": "^9.2.6",
     "typescript": "^4.4.4",
-    "webpack": "^5.74.0",
-    "webpack-cli": "^4.10.0",
-    "webpack-dev-server": "^4.10.0"
+    "webpack": "^5.61.0",
+    "webpack-cli": "^4.9.1",
+    "webpack-dev-server": "^4.4.0"
   },
   "dependencies": {
-    "@reduxjs/toolkit": "^1.8.4",
+    "@reduxjs/toolkit": "^1.9.1",
     "@types/react-redux": "^7.1.20",
-    "ajv": "^8.11.0",
-    "axios": "^0.27.2",
-    "module-name": "0.0.1-security",
+    "@types/styled-components": "^5.1.26",
+    "axios": "^1.2.2",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
-    "react-redux": "^8.0.2"
+    "react-redux": "^8.0.5",
+    "styled-components": "^5.3.9"
   }
 }

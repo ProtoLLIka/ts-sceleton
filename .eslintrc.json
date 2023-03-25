@@ -12,7 +12,6 @@
     "ecmaVersion": 12,
     "sourceType": "module"
   },
-  "semi": ["error", "always"],
   "plugins": ["react", "@typescript-eslint", "react-hooks"],
   "rules": {
     "no-use-before-define": "off",
@@ -54,5 +53,8 @@
     "import/resolver": {
       "typescript": {}
     }
+  },
+  "globals": {
+    "API_URL": "readonly"
   }
 }
